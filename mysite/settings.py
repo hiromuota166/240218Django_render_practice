@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "app",
+    "rest_framework",
 ]
 
 MIDDLEWARE = [
@@ -85,7 +86,7 @@ WSGI_APPLICATION = "mysite.wsgi.application"
 default_dburl = "sqlite:///" + str(BASE_DIR / "db.sqlite3")
 
 DATABASES = {
-  "default": config("DATABASE_URL", default=default_dburl, cast=db_url),
+    "default": config("DATABASE_URL", default=default_dburl, cast=db_url),
 }
 
 # Password validation
