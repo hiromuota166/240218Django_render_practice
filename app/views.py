@@ -17,3 +17,11 @@ def some_model_list(request):
     data = Post.objects.all()
     serializer = MyModelSerializer(data, many=True)
     return Response(serializer.data)
+
+@api_view(['POST'])
+def create_post(request):
+    serializer = MyModelSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data, status=201)
+    return Response(serializer.errors, status=400)
