@@ -7,4 +7,5 @@ gunicorn
 psycopg2-binary
 whitenoise
 uvicorn
-djangorestframework
+djangorestfram
+corsheaders
