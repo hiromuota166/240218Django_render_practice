@@ -8,3 +8,4 @@ psycopg2-binary
 whitenoise
 uvicorn
 djangorestframework
+corsheaders
